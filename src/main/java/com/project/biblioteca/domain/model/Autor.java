@@ -1,6 +1,7 @@
 package com.project.biblioteca.domain.model;
 
 
+import com.project.biblioteca.domain.utils.ValidationGroups;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -15,6 +16,7 @@ import javax.validation.constraints.*;
 public class Autor {
 
     @Id
+    @NotNull(groups = ValidationGroups.AutorId.class)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Long id;
